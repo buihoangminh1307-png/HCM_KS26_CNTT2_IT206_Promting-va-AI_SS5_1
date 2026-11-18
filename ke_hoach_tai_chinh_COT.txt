@@ -1,0 +1,55 @@
+LẬP KẾ HOẠCH TÀI CHÍNH CÁ NHÂN BẰNG CHAIN-OF-THOUGHT
+ 
+ 
+PHẦN A: PROMPT
+ 
+Bạn là chuyên gia tư vấn tài chính. Hãy lập kế hoạch tài chính tháng này từ dữ liệu sau:
+ 
+- Thu nhập: 20.000.000
+- Thuế: 1.000.000
+- Chi phí cố định: 6.000.000 (nhà 4.000.000, điện nước internet 1.000.000, đi lại 1.000.000)
+- Nợ: thẻ tín dụng 1.500.000, vay mua xe 2.000.000
+- Mục tiêu tiết kiệm: tối thiểu 20% thu nhập
+ 
+Hãy suy nghĩ từng bước một và tính toán chi tiết trước khi đưa ra quyết định.
+ 
+Bước 1: Thu nhập khả dụng = Thu nhập - Thuế - Chi phí cố định.
+Bước 2: Trừ tiền trả nợ tối thiểu.
+Bước 3: Trừ tiền tiết kiệm = 20% x Thu nhập.
+Bước 4: Chia phần còn lại theo quy tắc 50/30/20 cải tiến: 50% thiết yếu, 30% cá nhân, 20% dự phòng.
+ 
+Trình bày 2 phần:
+Phần 1 - Reasoning Steps: ghi công thức và từng phép tính, không nhảy cóc.
+Phần 2 - Bảng Markdown gồm 4 cột: Hạng mục | Số tiền | Tỷ lệ % | Ghi chú.
+ 
+Tổng tỷ lệ % phải bằng đúng 100%. Không dùng code Python hay Pydantic.
+ 
+ 
+PHẦN B: KẾT QUẢ MẪU
+ 
+Phần 1: Reasoning Steps
+ 
+Bước 1: 20.000.000 - 1.000.000 - 6.000.000 = 13.000.000
+Bước 2: Nợ = 1.500.000 + 2.000.000 = 3.500.000
+        Còn lại = 13.000.000 - 3.500.000 = 9.500.000
+Bước 3: Tiết kiệm = 20% x 20.000.000 = 4.000.000
+        Còn lại = 9.500.000 - 4.000.000 = 5.500.000
+Bước 4: Thiết yếu = 50% x 5.500.000 = 2.750.000
+        Cá nhân = 30% x 5.500.000 = 1.650.000
+        Dự phòng = 20% x 5.500.000 = 1.100.000
+ 
+Phần 2: Bảng phân bổ ngân sách
+ 
+| Hạng mục | Số tiền | Tỷ lệ % | Ghi chú |
+|---|---|---|---|
+| Thuế | 1.000.000 | 5% | Bắt buộc |
+| Chi phí cố định | 6.000.000 | 30% | Nhà, điện nước, đi lại |
+| Trả nợ | 3.500.000 | 17,5% | Thẻ tín dụng + vay xe |
+| Tiết kiệm | 4.000.000 | 20% | Đạt mức tối thiểu |
+| Thiết yếu | 2.750.000 | 13,75% | Ăn uống, sinh hoạt |
+| Cá nhân | 1.650.000 | 8,25% | Giải trí, mua sắm |
+| Dự phòng | 1.100.000 | 5,5% | Phòng khi thu nhập giảm |
+| Tổng | 20.000.000 | 100% | |
+ 
+Kiểm tra: 5 + 30 + 17,5 + 20 + 13,75 + 8,25 + 5,5 = 100%
+ + 8,25 + 5,5 = 100%
